@@ -1,11 +1,12 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonMenu, IonButtons, IonMenuButton } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonMenu, IonButtons, IonMenuButton } from '@ionic/react';
+import MainContainer from '../components/MainContainer';
 import './Home.css';
+import UseFetch from "../components/UseFetch";
 
-const Home: React.FC = () => {
-  return (
-    <>
-    <IonMenu contentId="main-content">
+const mainpage: React.FC = () => {
+    return (
+        <>
+     <IonMenu contentId="main-content">
         <IonHeader>
           <IonToolbar>
           <IonItem routerLink="/home">
@@ -28,12 +29,12 @@ const Home: React.FC = () => {
         </IonHeader>
         
         <IonContent fullscreen>
-        <ExploreContainer />
+        <MainContainer />
         </IonContent>
         
       </IonPage>
       </>
-  );
-};
-
-export default Home;
+    );
+  };
+  
+  export default mainpage;
